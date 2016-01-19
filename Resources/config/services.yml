@@ -1,4 +1,4 @@
 services:
    blitzr_api_client.client:
        class: Blitzr\ApiClientBundle\Service\BlitzrApiService
-       arguments: ["%blitzr_music.activated_sources%"]
+       arguments: ["%blitzr_music.api_key%"]
