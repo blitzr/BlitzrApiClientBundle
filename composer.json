@@ -23,7 +23,7 @@
         "blitzr/php-client": "dev-develop"
     },
     "autoload" : {
-        "psr-4" : {
+        "psr-0" : {
             "Blitzr\\ApiClientBundle" : ""
         }
     },
