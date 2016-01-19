@@ -1,4 +1,4 @@
 services:
-#    blitzr_api_client.example:
-#        class: Blitzr\ApiClientBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+   blitzr_api_client.client:
+       class: Blitzr\ApiClientBundle\Service\BlitzrApiService
+       arguments: ["%blitzr_music.activated_sources%"]
