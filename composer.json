@@ -12,17 +12,18 @@
     "license" : [
         "MIT"
     ],
-    "repositories": [
+    "minimum-stability": "dev",
+    "repositories" : [
         {
             "type": "vcs",
             "url": "/home/martin/Workspace/blitzr-php-client"
         }
     ],
-    "require": {
+    "require" : {
         "blitzr/php-client": "dev-develop"
     },
     "autoload" : {
-        "psr-0" : {
+        "psr-4" : {
             "Blitzr\\ApiClientBundle" : ""
         }
     },
