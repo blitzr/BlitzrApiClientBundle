@@ -4,7 +4,7 @@
 This bundle is the official Blitzr client bundle.
 It provides you a service to call the Blitzr API as easy as possible. This service implements all the methods from the official Blitzr PHP client. Also you can use the PHP client documentation as a reference for this bundle.
 
-To use this bundle you will need an API key, you can request it at : [developer.blitzr.com](https://developer.blitzr.com).
+To use this bundle you will need an API key, you can request it at : [api.blitzr.com](https://api.blitzr.com).
 
 
 ## Installation
