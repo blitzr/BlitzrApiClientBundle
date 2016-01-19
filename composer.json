@@ -1,0 +1,30 @@
+{
+    "name" : "Blitzr/ApiClientBundle",
+    "description" : "The official Blitzr API Client for Symfony",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Blitzr",
+        "email" : "developer@blitzr.com"
+    }],
+    "keywords" : [
+        "blitzr api bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+        "blitzr/php-client": "dev-develop"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Blitzr\\ApiClientBundle" : ""
+        }
+    },
+    "target-dir" : "Blitzr/ApiClientBundle",
+    "repositories" : [
+        {
+            "type": "vcs",
+            "url": "/home/martin/Workspace/blitzr-php-client"
+        }
+    ]
+}

@@ -1,0 +1,3 @@
+blitzr_api_client_homepage:
+    path:     /
+    defaults: { _controller: BlitzrApiClientBundle:Default:index }
