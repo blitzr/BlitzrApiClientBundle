@@ -26,5 +26,5 @@
             "Blitzr\\ApiClientBundle" : ""
         }
     },
-    "target-dir" : "Blitzr/ApiClientBundle",
+    "target-dir" : "Blitzr/ApiClientBundle"
 }
