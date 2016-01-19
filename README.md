@@ -22,7 +22,7 @@ Then enable the bundle in the Kernel.
     {
         $bundles = array(
             // ...
-            new FOS\UserBundle\FOSUserBundle(),
+            new Blitzr\ApiClientBundle\BlitzrApiClientBundle(),
             // ...
         );
     }
