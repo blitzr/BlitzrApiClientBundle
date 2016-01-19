@@ -1,5 +1,5 @@
 {
-    "name" : "Blitzr/ApiClientBundle",
+    "name" : "blitzr/api-client-bundle",
     "description" : "The official Blitzr API Client for Symfony",
     "type" : "symfony-bundle",
     "authors" : [{
