@@ -15,12 +15,12 @@
     "minimum-stability": "dev",
     "repositories" : [
         {
-            "type": "vcs",
-            "url": "/home/martin/Workspace/blitzr-php-client"
+            "type": "git",
+            "url": "git@github.com:blitzr/blitzr-php-client.git"
         }
     ],
     "require" : {
-        "blitzr/php-client": "dev-develop"
+        "blitzr/php-client": "dev-master"
     },
     "autoload" : {
         "psr-0" : {
