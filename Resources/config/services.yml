@@ -1,4 +1,4 @@
 services:
    blitzr_api_client.client:
-       class: Blitzr\ApiClientBundle\Service\BlitzrApiService
+       class: Blitzr\BlitzrClient
        arguments: ["%blitzr_api_client.api_key%"]
