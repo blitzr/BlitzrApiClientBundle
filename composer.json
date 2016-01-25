@@ -12,15 +12,8 @@
     "license" : [
         "MIT"
     ],
-    "minimum-stability": "dev",
-    "repositories" : [
-        {
-            "type": "git",
-            "url": "git@github.com:blitzr/blitzr-php-client.git"
-        }
-    ],
     "require" : {
-        "blitzr/php-client": "dev-master"
+        "blitzr/php-client": "1.*"
     },
     "autoload" : {
         "psr-0" : {
