@@ -51,3 +51,8 @@ This bundle provides you a service, let's take an example of how to get an Artis
     
     // Request a tag
     $tag = $blitzrClient->getTag('rock');
+
+
+## Documentation
+
+You can find the full PHP client documentation [here](https://github.com/blitzr/blitzr-php-client/tree/master/doc). Each of those methods are available by the Blitzr API Client Service.
