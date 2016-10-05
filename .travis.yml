@@ -18,7 +18,7 @@ env:
 before_script:
   - composer require symfony/framework-bundle:${SYMFONY_VERSION}
 
-script: phpunit --bootstrap vendor/autoload.php tests
+script: phpunit --bootstrap vendor/autoload.php Tests
 
 # notifications:
 #   email:
