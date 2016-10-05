@@ -10,23 +10,37 @@ use Symfony\Component\HttpKernel\KernelInterface;
 
 class BlitzrApiClientExtensionTest extends \PHPUnit_Framework_TestCase
 {
-    public function testLoad()
+
+
+    /**
+     * @expectedException        Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
+     * @expectedExceptionCode 0
+     * @expectedExceptionMessage The child node "api_key" at path "blitzr_api_client" must be configured.
+     */
+    public function testMissingConfig()
+    {
+        $container = $this->getContainerForConfig();
+
+        $blitzr_api_client = $container->get('blitzr_api_client.client');
+    }
+
+
+
+    public function testCorrectConfig()
     {
         $container = $this->getContainerForConfig(array('blitzr_api_client' => array('api_key' => 'your_api_key')));
 
         $blitzr_api_client = $container->get('blitzr_api_client.client');
     }
 
-    private function getContainerForConfig(array $configs, KernelInterface $kernel = null)
+    private function getContainerForConfig(array $configs = array())
     {
-        if (null === $kernel) {
-            $kernel = $this->createMock('Symfony\Component\HttpKernel\KernelInterface');
-            $kernel
-                ->expects($this->any())
-                ->method('getBundles')
-                ->will($this->returnValue(array()))
-            ;
-        }
+        $kernel = $this->getMockBuilder('Symfony\Component\HttpKernel\KernelInterface')->getMock();
+        $kernel
+            ->expects($this->any())
+            ->method('getBundles')
+            ->will($this->returnValue(array()))
+        ;
 
         $bundle = new BlitzrApiClientBundle($kernel);
         $extension = $bundle->getContainerExtension();
@@ -35,8 +49,6 @@ class BlitzrApiClientExtensionTest extends \PHPUnit_Framework_TestCase
         $container->setParameter('kernel.debug', true);
         $container->setParameter('kernel.cache_dir', sys_get_temp_dir().'/serializer');
         $container->setParameter('kernel.bundles', array());
-        $container->set('translator', $this->createMock('Symfony\\Component\\Translation\\TranslatorInterface'));
-        $container->set('debug.stopwatch', $this->createMock('Symfony\\Component\\Stopwatch\\Stopwatch'));
         $container->registerExtension($extension);
         $extension->load($configs, $container);
 

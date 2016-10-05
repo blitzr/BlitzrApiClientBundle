@@ -15,6 +15,9 @@
     "require" : {
         "blitzr/php-client": "1.*"
     },
+    "require-dev" : {
+        "phpunit/phpunit": "*"
+    },
     "autoload" : {
         "psr-0" : {
             "Blitzr\\ApiClientBundle" : ""
