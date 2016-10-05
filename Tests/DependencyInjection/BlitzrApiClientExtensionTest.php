@@ -24,14 +24,30 @@ class BlitzrApiClientExtensionTest extends \PHPUnit_Framework_TestCase
         $blitzr_api_client = $container->get('blitzr_api_client.client');
     }
 
-
-
     public function testCorrectConfig()
     {
         $container = $this->getContainerForConfig(array('blitzr_api_client' => array('api_key' => 'your_api_key')));
 
         $blitzr_api_client = $container->get('blitzr_api_client.client');
     }
+
+    public function testMethods()
+    {
+        $container = $this->getContainerForConfig(array('blitzr_api_client' => array('api_key' => 'your_api_key')));
+
+        $blitzr_api_client = $container->get('blitzr_api_client.client');
+
+        $public_methods = get_class_methods($blitzr_api_client);
+
+        $this->assertGreaterThan(2, count($public_methods));
+
+        foreach ($public_methods as $method) {
+            $this->assertTrue(is_callable(array($blitzr_api_client, $method)));
+        }
+
+
+    }
+
 
     private function getContainerForConfig(array $configs = array())
     {
