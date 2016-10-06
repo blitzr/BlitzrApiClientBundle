@@ -19,6 +19,6 @@ before_script:
 
 script: phpunit --bootstrap vendor/autoload.php Tests
 
-# notifications:
-#   email:
-#     - developer@blitzr.com
+notifications:
+  email:
+    - developer@blitzr.com
