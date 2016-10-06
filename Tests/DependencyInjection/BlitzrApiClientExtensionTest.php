@@ -10,8 +10,6 @@ use Symfony\Component\HttpKernel\KernelInterface;
 
 class BlitzrApiClientExtensionTest extends \PHPUnit_Framework_TestCase
 {
-
-
     /**
      * @expectedException        Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
      * @expectedExceptionCode 0
@@ -20,13 +18,6 @@ class BlitzrApiClientExtensionTest extends \PHPUnit_Framework_TestCase
     public function testMissingConfig()
     {
         $container = $this->getContainerForConfig();
-
-        $blitzr_api_client = $container->get('blitzr_api_client.client');
-    }
-
-    public function testCorrectConfig()
-    {
-        $container = $this->getContainerForConfig(array('blitzr_api_client' => array('api_key' => 'your_api_key')));
 
         $blitzr_api_client = $container->get('blitzr_api_client.client');
     }
@@ -44,10 +35,7 @@ class BlitzrApiClientExtensionTest extends \PHPUnit_Framework_TestCase
         foreach ($public_methods as $method) {
             $this->assertTrue(is_callable(array($blitzr_api_client, $method)));
         }
-
-
     }
-
 
     private function getContainerForConfig(array $configs = array())
     {
