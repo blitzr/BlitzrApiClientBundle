@@ -1,13 +1,24 @@
-# BlitzrApiClientBundle
+Blitzr Official PHP Bundle
+================
+
+A PHP API client bundle for the [Blitzr API](https://blitzr.io).
+
+To use this bundle you will need an API key, you can request it at : [https://blitzr.io](https://blitzr.io/#contact).
 
 
-This bundle is the official Blitzr client bundle.
-It provides you a service to call the Blitzr API as easy as possible. This service implements all the methods from the official Blitzr PHP client. Also you can use the PHP client documentation as a reference for this bundle.
+----------
 
-To use this bundle you will need an API key, you can request it at : [developer.blitzr.com](http://developer.blitzr.com).
+Documentation
+---------------
+
+This service implements all the methods from the [official Blitzr PHP client](https://github.com/blitzr-php-client/). Also you can use the [PHP client documentation](https://blitzr.github.io/blitzr-php-client/) as a reference for this bundle.
+
+You can also refer to the official [Blitzr API reference](https://blitzr.io/doc) to have more informations.
+----------
 
 
-## Installation
+Installation
+---------------
 
 First add BlitzrApiClientBundle to your composer requirements.
 
@@ -42,12 +53,17 @@ blitzr_api_client:
     api_key: "your_api_key"
 ```
 
-That's all ! 
+That's all !
 
-## Basic usage
+
+----------
+
+Getting Started
+---------------------
+
 
 This bundle provides you a service, let's take an example of how to get an Artist or a Tag.
-    
+
 ```php
 // Get the service
 $blitzrClient = $this->get('blitzr_api_client.client');
@@ -58,7 +74,3 @@ $artist = $blitzrClient->getArtist('year-of-no-light');
 // Request a tag
 $tag = $blitzrClient->getTag('rock');
 ```
-
-## Documentation
-
-You can find the full PHP client documentation [here](https://github.com/blitzr/blitzr-php-client/tree/master/docs). Each of those methods are available by the Blitzr API Client Service.
