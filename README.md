@@ -6,15 +6,12 @@ A PHP API client bundle for the [Blitzr API](https://blitzr.io).
 To use this bundle you will need an API key, you can request it at : [https://blitzr.io](https://blitzr.io/#contact).
 
 
-----------
-
 Documentation
 ---------------
 
 This service implements all the methods from the [official Blitzr PHP client](https://github.com/blitzr-php-client/). Also you can use the [PHP client documentation](https://blitzr.github.io/blitzr-php-client/) as a reference for this bundle.
 
 You can also refer to the official [Blitzr API reference](https://blitzr.io/doc) to have more informations.
-----------
 
 
 Installation
@@ -55,8 +52,6 @@ blitzr_api_client:
 
 That's all !
 
-
-----------
 
 Getting Started
 ---------------------
